@@ -1,0 +1,19 @@
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.logout-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: tomato;
+}

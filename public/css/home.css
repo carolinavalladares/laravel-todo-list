@@ -1,0 +1,111 @@
+@import url("resets.css");
+@import url("fonts.css");
+@import url("header.css");
+@import url("errors.css");
+
+.main-wrapper {
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    max-width: 992px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.todo-input {
+    height: 44px;
+    flex: 1;
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input[type="checkbox"] {
+    accent-color: orangered;
+}
+
+.submit-btn {
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: orangered;
+    font-size: 30px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.todo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 992px;
+    margin: 40px auto 0;
+}
+.todo-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+}
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 16px;
+    width: 100%;
+}
+
+.important-tag {
+    color: white;
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 5;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.delete-btn {
+    color: tomato;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.edit-btn {
+    color: blue;
+    font-size: 12px;
+    font-weight: 700;
+}

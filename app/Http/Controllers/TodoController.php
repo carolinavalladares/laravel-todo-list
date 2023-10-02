@@ -14,7 +14,7 @@ class TodoController extends Controller
 
         // Validate data
         $values = $request->validate([
-            'name' => 'required|unique:todos',
+            'name' => 'required',
         ]);
 
         $todo = [];

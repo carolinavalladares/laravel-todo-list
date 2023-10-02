@@ -55,6 +55,9 @@
         <div class="todo-container">       
                 <ul class="todo-list">
                   @foreach ($todos as $todo)
+
+                  @if ($todo->done == true) @continue @endif
+                 
                         <li class="todo">
                             <p>{{$todo->name}}</p>
 
@@ -63,13 +66,37 @@
                                     <span class="important-tag">important</span>
                                  @endif
 
+                                 <a title="complete task" class="done-btn" href={{route('complete_todo', ['todo'=>$todo])}}>Done</a>
+
+
                                  <a title="delete task" class="delete-btn" href="{{route('delete_todo',['todo'=>$todo])}}">Delete</a>
                                 
-                            </div>
-                          
+                            </div>                          
                         </li>
                   @endforeach
                 </ul>
+        </div>
+
+        <div>
+            <h2 class="title ">Completed Tasks</h2>
+
+            <ul class="todo-list">
+                @foreach ($todos as $todo)
+
+                @if ($todo->done == false) @continue @endif
+               
+                      <li class="todo completed">
+                          <p>{{$todo->name}}</p>
+
+                          <div class="actions">
+                              @if ($todo->important == true)
+                                  <span class="important-tag">important</span>
+                               @endif
+                              
+                          </div>                          
+                      </li>
+                @endforeach
+              </ul>
         </div>
 
     </div>

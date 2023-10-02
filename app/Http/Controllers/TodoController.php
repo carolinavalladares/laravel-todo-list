@@ -44,5 +44,14 @@ class TodoController extends Controller
         return redirect(route('home'));
     }
 
+    public function complete(Todo $todo)
+    {
+
+        $todo->update(['done' => true]);
+
+        return redirect(route('home'));
+
+    }
+
 
 }

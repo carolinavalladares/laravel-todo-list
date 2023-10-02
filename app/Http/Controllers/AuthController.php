@@ -60,7 +60,7 @@ class AuthController extends Controller
 
 
 
-        User::create(['name' => $values['name'], 'email' => $values['email'], 'password' => $values['password']]);
+        User::create($values);
 
         return redirect(route('login'));
     }

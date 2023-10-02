@@ -26,16 +26,18 @@ Route::post("/handle_register", [AuthController::class, 'handleRegister'])->name
 
 // Protected Routes
 Route::middleware('auth:sanctum')->group(function () {
-    // Home page
-    Route::get('/', [UserController::class, 'index'])->name('home');
-
-    // create todo
-    Route::post("/todos/create", [TodoController::class, 'create'])->name('handle_create_todo');
-
-    // delete todo
-    Route::get("/todos/{todo}/delete", [TodoController::class, 'delete'])->name('delete_todo');
-
     // logout
     Route::get("/logout", [AuthController::class, 'logout'])->name('logout');
 
+    // Home page
+    Route::get('/', [UserController::class, 'index'])->name('home');
+
+    // create task
+    Route::post("/todos/create", [TodoController::class, 'create'])->name('handle_create_todo');
+
+    // delete task
+    Route::get("/todos/{todo}/delete", [TodoController::class, 'delete'])->name('delete_todo');
+
+    // complete task
+    Route::get("/todos/{todo}/complete", [TodoController::class, 'complete'])->name('complete_todo');
 });

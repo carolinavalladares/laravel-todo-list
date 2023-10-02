@@ -2,7 +2,7 @@
 
 A simple to-do list application with authentication.
 
-I built this project to gain a better understanding of Laravel's workflow as well as learning about authentification in Laravel projects.
+I built this project to gain a better understanding of Laravel's workflow as well as learning about authentication in Laravel projects.
 
 ### Project setup
 
